@@ -197,7 +197,7 @@ app_license = "mit"
 # Request Events
 # ----------------
 # before_request = ["sandvirp_debug.utils.before_request"]
-# after_request = ["sandvirp_debug.utils.after_request"]
+after_request = ["sandvirp_debug.api_failure_log.log_failed_request"]
 
 # Job Events
 # ----------
@@ -238,7 +238,6 @@ app_license = "mit"
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True
 
-# default_log_clearing_doctypes = {
-# 	"Logging DocType Name": 30  # days to retain logs
-# }
-
+default_log_clearing_doctypes = {
+	"API Failure Log": 30  # days to retain logs
+}
